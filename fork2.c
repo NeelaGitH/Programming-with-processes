@@ -51,3 +51,11 @@ In the parent, fork() == 0 → false → executes the else block.
 
 So yes, the parent has both if and else in its code, but it only executes the else part because for the parent fork() does not return 0.
 */
+
+
+/*
+In this code, since the parent also terminates almost immediately, the init process (PID 1) adopts the child and automatically reaps it.
+
+So practically: a zombie may exist briefly, but it disappears immediately when the parent dies.
+
+*/
